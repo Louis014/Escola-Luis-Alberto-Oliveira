@@ -24,8 +24,10 @@ create table professores(
 create table alunos(
 	id_aluno bigint auto_increment primary key,
 	nome_aluno varchar(100) not null,
-    sobrenome_aluno varchar(100) not null
-    email
+    sobrenome_aluno varchar(100) not null,
+    email_pess_aluno varchar(100),
+    email_estd_aluno varchar(100),
+    cpf_aluno varchar(11) not null
 );
 
 create table cron_6ano(
