@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+.container {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 2%;
+    max-width: 30rem;
+    min-width: 30rem;
+    max-height: 70rem;
+    min-height: 50rem;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 2.3rem;
+
+    .logoLogin {
+        width: 250px;
+        border-radius: 10px;
+    }
+    
+    .btn{
+        min-width: 22rem;
+        background-color: #66A486;
+        font-weight: 600;
+        padding: 0.7rem;
+        border-radius: 5px;
+        border: none;
+        transition: 300ms;
+        color: black;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: black;
+    } 
+
+    .btn:hover{
+        min-width: 25rem;
+        background-color: #A8D5BA;
+        font-weight: 700;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        transition: 300ms;
+    }
+}
+p{
+    margin-top: -1rem;
+}
+
+.creds {
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+}
