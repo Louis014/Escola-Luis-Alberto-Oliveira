@@ -1,5 +1,5 @@
 <?php
-include "../db/config.php"; 
+include "db/config.php";
 
 session_start(); 
 
@@ -17,9 +17,11 @@ if ($result) {
         $_SESSION["email"] = $result["email"];
         $_SESSION["id"] = $result["id"];
         
-        header("Location: ../pages/menu.php");
+        header("Location: menu.php");
         exit();
     } else {
-        header("Location: ../pages/loginincorreto.html");
+        session_destroy();
+        header("Location: loginincorreto.html");
+        exit();
     }
 }

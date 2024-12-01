@@ -1,8 +1,8 @@
 <?php 
-include "../php/validarlogin.php";
+include "validarlogin.php";
 
-if ($_SESSION['nome'] == NULL) {
-    header("Location: ../pages/index.html");
+if (!isset($_SESSION["nome"])) {
+    header("Location: index.php");
     session_destroy();
     exit();
 }

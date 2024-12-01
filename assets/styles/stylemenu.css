@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #326854;
+    background-color: #162A3D;
     display: flex;
     align-items: center;
     color: white;
@@ -29,7 +29,7 @@ header {
     gap: 10px;
 }
 
-.LogoClinica {
+.LogoEscola {
     width: 60px;
     margin-left: 2rem;
     margin-top: 1rem;
@@ -63,7 +63,7 @@ section{
 }
 
 .btnmenu{
-    background-color: #4F9A73;
+    background-color: #4a647e;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +83,7 @@ section{
 }
 
 .btnmenu:hover{
-    background-color: #2B5E4B;
+    background-color: #7298bd;
     align-items: center;
     justify-content: center;
     border: none;
@@ -103,7 +103,7 @@ section{
 }
 
 @media (max-width: 700px) {
-    .LogoClinica {
+    .LogoEscola {
         width: 45px;
         margin-left: 1rem;
         margin-top: 1rem;

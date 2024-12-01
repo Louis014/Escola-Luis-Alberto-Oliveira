@@ -7,6 +7,6 @@ $_SESSION['id'] = NULL;
 
 session_destroy();
 
-header("Location: index.html");
+header("Location: index.php");
 exit();
 ?>
