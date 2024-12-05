@@ -1,6 +1,6 @@
 <?php
 if (!empty($_SESSION['id_user'])) {
-    // manda p menu
+    
 }
 ?>
 
@@ -31,7 +31,7 @@ if (!empty($_SESSION['id_user'])) {
             </div>
             <div class="form-group">
                 <select class="form-control" name="nivel">
-                    <option value="0">Selecione o seu nível...</option>
+                    <option value="">Selecione o seu nível...</option>
                     <option value="1">Diretoria</option>
                     <option value="2">Professor(a)</option>
                     <option value="3">Aluno(a)</option>

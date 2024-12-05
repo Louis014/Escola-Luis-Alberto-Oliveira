@@ -8,8 +8,9 @@ if (form_login) {
 
     const email = dadosForm.get("email");
     const senha = dadosForm.get("senha");
+    const nivel = dadosForm.get("nivel");
 
-    if (!email || !senha) {
+    if (!email || !senha || !nivel) {
       Swal.fire({
         text: "Preencha todos os campos.",
         icon: "error",
@@ -19,15 +20,6 @@ if (form_login) {
       return;
     }
 
-    Swal.fire({
-      title: "Processando...",
-      timer: 5000,
-      timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
-
     try {
       const dados = await fetch("/src/scripts/login.php", {
         method: "POST",
@@ -36,7 +28,7 @@ if (form_login) {
 
       const resposta = await dados.json();
 
-      if (resposta["status"]) {
+      if (resposta["status-dir"]) {
         Swal.fire({
           text: resposta["msg"],
           icon: "success",
@@ -44,8 +36,30 @@ if (form_login) {
           confirmButtonText: "Fechar",
         }).then(() => {
           form_login.reset();
-          window.location.href = "../../painel/";
+          window.location.href = "/src/diretoria/menu.php";
         });
+        if (resposta["status-prof"]) {
+          Swal.fire({
+            text: resposta["msg"],
+            icon: "success",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Fechar",
+          }).then(() => {
+            form_login.reset();
+            window.location.href = "/src/professor/menu.php";
+          });
+        }
+        if (resposta["status-aluno"]) {
+          Swal.fire({
+            text: resposta["msg"],
+            icon: "success",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Fechar",
+          }).then(() => {
+            form_login.reset();
+            window.location.href = "/src/aluno/menu.php";
+          });
+        }
       } else {
         Swal.fire({
           text: resposta["msg"],
