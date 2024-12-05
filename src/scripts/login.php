@@ -1,11 +1,9 @@
 <?php
-include "../db/config.php";
-
+include "../scripts/conn.php";
 session_start(); 
 
-$email = $_POST["email"] ?? '';
-$senha = $_POST["senha"] ?? '';
-$nivel = $_POST["nivel"] ?? '';
+
+
 
 if($nivel == "1"){
     $sql = $pdo->prepare("SELECT * FROM diretoria WHERE email_corp_func = :email");
@@ -15,8 +13,9 @@ if($nivel == "1"){
 
     if ($result1) {
         if ($result1['senha_func'] === $senha) {
-            $_SESSION["nome_func"] = $result["nome"];
-            $_SESSION["id"] = $result["id"];
+            $_SESSION["nome_func_user"] = $result["nome"];
+            $_SESSION["id_user"] = $result["id"];
+            
         
             header("Location: ../diretoria/menu.php");
             exit();
@@ -26,5 +25,4 @@ if($nivel == "1"){
             exit();
         }
     }
-
 }
