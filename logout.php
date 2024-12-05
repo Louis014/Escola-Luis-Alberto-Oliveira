@@ -1,12 +1,9 @@
 <?php 
-include "validarlogin.php";
-
-$_SESSION['nome'] = NULL;
-$_SESSION['email'] = NULL;
-$_SESSION['id'] = NULL;
-
+if(session_status() === PHP_SESSION_NONE){
+    session_start();
+}
 session_destroy();
 
-header("Location: index.php");
+header("Location: login.html");
 exit();
 ?>
