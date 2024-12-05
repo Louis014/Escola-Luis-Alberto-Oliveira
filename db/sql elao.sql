@@ -7,11 +7,15 @@ create table diretoria(
     sobrenome_func varchar(150) not null,
     email_pess_func varchar(100) not null unique,
     email_corp_func varchar(100) not null unique,
-    telefone_func int not null,
+    telefone_func bigint not null,
     cpf_func varchar(11) not null unique,
     nascimento_func date not null,
     senha_func varchar(25) not null
 );
+
+insert into diretoria( nome_func, sobrenome_func, email_pess_func, email_corp_func, telefone_func, cpf_func, nascimento_func, senha_func)
+Values
+	("Luis", "Alberto Oliveira", "luis.oliveira@gmail.com", "luis.1@elao.com", 71912345670, "06623158708", "1982-12-10", "admin");
 
 create table professores(
     id_professor int auto_increment primary key,
