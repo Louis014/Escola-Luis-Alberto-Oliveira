@@ -66,22 +66,21 @@
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Parentesco do 1º responsável</label>
-          <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
+          <input type="text" class="form-control" name="parentresp1" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
             required>
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Nome do 2º responsável</label>
-          <input type="text" class="form-control" name="nmresp1" id="exampleInputEmail1" placeholder="Insira o nome do responsável" required>
+          <input type="text" class="form-control" name="nmresp2" id="exampleInputEmail1" placeholder="Insira o nome do responsável">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Telefone do 2º responsável</label>
-          <input type="number" class="form-control" name="telresp1" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável" required>
+          <input type="number" class="form-control" name="telresp2" minlength="11" maxlength="11"
+            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Parentesco do 2º responsável</label>
-          <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
-            required>
+          <input type="text" class="form-control" name="parentresp2" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô...">
         </div>
         <div class="contBotao">
           <button type="submit" class="btnMatricular">Matricular</button>
