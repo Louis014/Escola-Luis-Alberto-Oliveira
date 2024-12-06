@@ -55,7 +55,7 @@
             </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Nome do 1º responsável</label>
-          <input type="email" class="form-control" name="nmresp1" id="exampleInputEmail1" placeholder="Insira o nome do responsável" required>
+          <input type="text" class="form-control" name="nmresp1" id="exampleInputEmail1" placeholder="Insira o nome do responsável" required>
         </div>
       </div>
       <div class="coluna">
@@ -69,15 +69,19 @@
           <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
             required>
         </div>
-        
         <div class="form-group">
-          <label for="exampleInputSenha1">Senha</label>
-          <input type="password" class="form-control" name="senha" id="exampleInputEmail1" placeholder="Senha" required>
+          <label for="exampleInputEmail1">Nome do 2º responsável</label>
+          <input type="text" class="form-control" name="nmresp1" id="exampleInputEmail1" placeholder="Insira o nome do responsável" required>
         </div>
         <div class="form-group">
-          <label for="exampleInputSenha1">Confirme sua senha</label>
-          <input type="password" class="form-control" name="confsenha" id="exampleInputEmail1"
-            placeholder="Insira novamente e sua senha" required>
+          <label for="exampleInputEmail1">Telefone do 2º responsável</label>
+          <input type="number" class="form-control" name="telresp1" minlength="11" maxlength="11"
+            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Parentesco do 2º responsável</label>
+          <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
+            required>
         </div>
         <div class="contBotao">
           <button type="submit" class="btnMatricular">Matricular</button>
