@@ -55,13 +55,14 @@ create table
         email_pess_aluno varchar(100),
         email_estd_aluno varchar(100),
         cpf_aluno varchar(11) not null unique,
+        sexo_aluno Enum("Masculino", "Feminino", "Outro") not null,
+        turma_aluno int not null,
         nome_resposavel1 varchar(150) not null,
         telefone_resposvael1 bigint not null,
         parentesco_responsavel1 varchar(50) not null,
         nome_resposavel2 varchar(150),
         telefone_resposvael2 bigint,
         parentesco_responsavel2 varchar(50),
-        turma_aluno int not null,
         senha_aluno varchar(25) not null
     );
 

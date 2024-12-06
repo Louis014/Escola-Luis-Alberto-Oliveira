@@ -36,22 +36,6 @@
             required>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Endereço de e-mail</label>
-          <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email" required>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Telefone</label>
-          <input type="number" class="form-control" name="telefone" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone" required>
-        </div>
-      </div>
-      <div class="coluna">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Endereço</label>
-          <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Endereço"
-            required>
-        </div>
-        <div class="form-group">
           <label for="exampleInputPassword1">Sexo</label>
           <select class="form-control" name="sexo" id="exampleInputSexo1">
             <option value="Masculino">Masculino</option>
@@ -59,6 +43,33 @@
             <option value="Outro">Outro</option>
           </select>
         </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Turma</label>
+                <select class="form-control" name="nivel">
+                    <option value="">Selecione a turma do aluno...</option>
+                    <option value=6>6º Ano</option>
+                    <option value=7>7º Ano</option>
+                    <option value=8>8º Ano</option>
+                    <option value=9>9º Ano</option>
+                </select>
+            </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nome do 1º responsável</label>
+          <input type="email" class="form-control" name="nmresp1" id="exampleInputEmail1" placeholder="Insira o nome do responsável" required>
+        </div>
+      </div>
+      <div class="coluna">
+      <div class="form-group">
+          <label for="exampleInputEmail1">Telefone do 1º responsável</label>
+          <input type="number" class="form-control" name="telresp1" minlength="11" maxlength="11"
+            id="exampleInputTelefone1" placeholder="Telefone do 1º responsável" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Parentesco do 1º responsável</label>
+          <input type="text" class="form-control" name="endereco" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..."
+            required>
+        </div>
+        
         <div class="form-group">
           <label for="exampleInputSenha1">Senha</label>
           <input type="password" class="form-control" name="senha" id="exampleInputEmail1" placeholder="Senha" required>
