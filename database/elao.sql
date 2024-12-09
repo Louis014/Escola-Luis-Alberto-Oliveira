@@ -1,5 +1,4 @@
 create database elao;
-
 use elao;
 
 create table
@@ -33,6 +32,27 @@ Values
         "06623158708",
         "1982-12-10",
         "admin"
+    );
+    
+    insert into
+    diretoria (
+        nome_func,
+        email_pess_func,
+        email_corp_func,
+        telefone_func,
+        cpf_func,
+        nascimento_func,
+        senha_func
+    )
+Values
+    (
+        "Pedro Silva",
+        "pedruuu291@gmail.com",
+        "psa@elao.com",
+        71983442955,
+        "06623258708",
+        "1982-12-10",
+        "Chicote1@"
     );
 
 create table

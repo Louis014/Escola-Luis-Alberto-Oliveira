@@ -1,9 +1,10 @@
 <?php
-if (!empty($_SESSION['id_user'])) {
-    
+session_start();
+if (!empty($_SESSION['session_id'])) {
+    header('Location: src/diretoria/menu.php');
+    exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
