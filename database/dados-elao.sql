@@ -16,7 +16,7 @@ VALUES
 ("Camila Soares", "História", "camila.s@gmail.com", "csoares@elao.com", 71999012345, "06623158717", "1991-03-08", "CamilaHist4"),
 ("Marcos Vinícius", "Geografia", "marcos.v@gmail.com", "mvinicius@elao.com", 71999123456, "06623158718", "1980-04-27", "VinGeo5");
   
-  INSERT INTO alunos (nome_aluno, email_pess_aluno, email_estd_aluno, cpf_aluno, sexo_aluno, turma_aluno, nome_responsavel, telefone_responsavel, parentesco_responsavel, nome_responsavel2, telefone_responsavel2, parentesco_responsave2, senha_aluno)
+  INSERT INTO alunos (nome_aluno, email_pess_aluno, email_estd_aluno, cpf_aluno, sexo_aluno, turma_aluno, nome_responsavel, telefone_responsavel, parentesco_responsavel, nome_responsavel2, telefone_responsavel2, parentesco_responsavel2, senha_aluno)
 VALUES
 ("Carlos Souza", "carlos.s@gmail.com", "carlos.s@elao.com", "06623158719", "Masculino", 601, "José Souza", 71991234567, "Pai", "Ana Souza", 71992345678, "Mãe", "Carl@2024"),
 ("Mariana Silva", "mariana.s@gmail.com", "mariana.s@elao.com", "06623158720", "Feminino", 701, "Carlos Silva", 71993456789, "Pai", "Beatriz Silva", 71994567890, "Mãe", "Mari@2024"),

@@ -83,7 +83,7 @@ create table
         parentesco_responsavel varchar(50) not null,
         nome_responsavel2 varchar(150),
         telefone_responsavel2 bigint,
-        parentesco_responsave2 varchar(50),
+        parentesco_responsavel2 varchar(50),
         senha_aluno varchar(25) not null
     );
 

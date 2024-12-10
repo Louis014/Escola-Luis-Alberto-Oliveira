@@ -1,4 +1,4 @@
-const formcad = document.querySelector("#cont-form");
+const formcad = document.querySelector("#form-cad");
 
 if (formcad) {
   formcad.addEventListener("submit", async (e) => {
@@ -40,16 +40,6 @@ if (formcad) {
       return;
     }
 
-    if (senha !== confSenha) {
-      Swal.fire({
-        text: "As senhas precisam ser iguais.",
-        icon: "error",
-        confirmButtonColor: "#3085d6",
-        confirmButtonText: "Fechar",
-      });
-      return;
-    }
-
     Swal.fire({
       title: "Processando...",
       html: "Aguarde enquanto estamos cadastrando...",
@@ -60,7 +50,7 @@ if (formcad) {
     });
 
     try {
-      const dados = await fetch("matricular-aluno.php", {
+      const dados = await fetch("action.php",   {
         method: "POST",
         body: dadosForm,
       });
