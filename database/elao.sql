@@ -1,10 +1,13 @@
 create database elao;
-
 use elao;
+
+
+DELETE FROM `elao`.`alunos` WHERE (`email_pess_aluno` = 'pedruuu291@gmail.com');
+
 
 create table
     diretoria (
-        id_func bigint auto_increment primary key,
+        id_func INT auto_increment primary key,
         nome_func varchar(70) not null,
         email_pess_func varchar(100) not null unique,
         email_corp_func varchar(100) not null unique,
@@ -71,20 +74,21 @@ create table
 
 create table
     alunos (
-        id_aluno bigint auto_increment primary key,
-        nome_aluno varchar(100) not null,
-        email_pess_aluno varchar(100),
-        email_estd_aluno varchar(100),
-        cpf_aluno varchar(11) not null unique,
-        sexo_aluno Enum ("Masculino", "Feminino", "Outro") not null,
-        turma_aluno int not null,
-        nome_responsavel varchar(150) not null,
-        telefone_responsavel bigint not null,
-        parentesco_responsavel varchar(50) not null,
-        nome_responsavel2 varchar(150),
-        telefone_responsavel2 bigint,
-        parentesco_responsavel2 varchar(50),
-        senha_aluno varchar(25) not null
+        id_aluno INT PRIMARY KEY AUTO_INCREMENT,
+        nome_aluno VARCHAR(100) NOT NULL,
+        email_pess_aluno VARCHAR(255) UNIQUE NOT NULL,
+        email_estd_aluno VARCHAR(255) UNIQUE NOT NULL,
+        cpf_aluno VARCHAR(14) UNIQUE,
+        sexo_aluno VARCHAR(1) NOT NULL,
+        turma_aluno VARCHAR(20) NOT NULL,
+        nome_responsavel VARCHAR(100) NOT NULL,
+        telefone_responsavel VARCHAR(11) NOT NULL,
+        parentesco_responsavel VARCHAR(100) NOT NULL,
+        nome_responsavel2 VARCHAR(100) NOT NULL,
+        telefone_responsavel2 VARCHAR(11) NOT NULL,
+        parentesco_responsavel2 VARCHAR(100) NOT NULL,
+        senha_aluno VARCHAR(128) NOT NULL,
+        data_matricula DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
 create table
@@ -103,7 +107,7 @@ create table
 -- Tabela de notas de Arte com a coluna 'turma'
 CREATE TABLE
     notas_Arte (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -116,7 +120,7 @@ CREATE TABLE
 -- Tabela de notas de Ciências com a coluna 'turma'
 CREATE TABLE
     notas_Ciencias (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -129,7 +133,7 @@ CREATE TABLE
 -- Tabela de notas de Educação Física com a coluna 'turma'
 CREATE TABLE
     notas_Educacao_Fisica (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -142,7 +146,7 @@ CREATE TABLE
 -- Tabela de notas de Ensino Religioso com a coluna 'turma'
 CREATE TABLE
     notas_Ensino_Religioso (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -155,7 +159,7 @@ CREATE TABLE
 -- Tabela de notas de Espanhol com a coluna 'turma'
 CREATE TABLE
     notas_Espanhol (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -168,7 +172,7 @@ CREATE TABLE
 -- Tabela de notas de Geografia com a coluna 'turma'
 CREATE TABLE
     notas_Geografia (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -181,7 +185,7 @@ CREATE TABLE
 -- Tabela de notas de História com a coluna 'turma'
 CREATE TABLE
     notas_Historia (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -194,7 +198,7 @@ CREATE TABLE
 -- Tabela de notas de Inglês com a coluna 'turma'
 CREATE TABLE
     notas_Ingles (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -207,7 +211,7 @@ CREATE TABLE
 -- Tabela de notas de Matemática com a coluna 'turma'
 CREATE TABLE
     notas_Matematica (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -220,7 +224,7 @@ CREATE TABLE
 -- Tabela de notas de Português com a coluna 'turma'
 CREATE TABLE
     notas_Portugues (
-        id_aluno_fk BIGINT PRIMARY KEY,
+        id_aluno_fk INT PRIMARY KEY,
         nome_aluno varchar(100) not null,
         av1 FLOAT NOT NULL,
         av2 FLOAT NOT NULL,
@@ -281,4 +285,7 @@ create table
         a10h25 varchar(50) not null,
         a11h10 varchar(50) not null
     );
+    
+    DELETE FROM alunos  = 'pedruuu291@gmail.com';
+    
     SELECT id_aluno FROM alunos ORDER BY id_aluno DESC LIMIT 1

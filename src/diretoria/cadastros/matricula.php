@@ -50,9 +50,9 @@ if (empty($_SESSION['session_id'])) {
         <div class="form-group">
           <label for="exampleInputPassword1">Sexo</label>
           <select class="form-control" name="sexo" id="sexo">
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-            <option value="Outro">Outro</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+            <option value="O">Outro</option>
           </select>
         </div>
         <div class="form-group">
