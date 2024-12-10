@@ -64,5 +64,9 @@ if (!empty($cpf)) {
             $sql->execute();
         }
     } catch (PDOException $e) {
+        $retorna = ['status' => false, 'msg' => "Ocorreu um erro ao tentar fazer o login: " . $e->getMessage()];
+        header('Content-Type: application/json');
+        echo json_encode($retorna);
+        exit();
     }
 }

@@ -73,7 +73,7 @@ if (empty($_SESSION['session_id'])) {
       <div class="coluna">
         <div class="form-group">
           <label for="exampleInputEmail1">Telefone do 1º responsável</label>
-          <input type="number" class="form-control" name="telefone-responsavel" minlength="11" maxlength="11"
+          <input type="text" class="form-control" name="telefone-responsavel" minlength="11" maxlength="11"
             id="exampleInputTelefone1" placeholder="Telefone do 1º responsável" value="71983442945">
         </div>
         <div class="form-group">
@@ -86,7 +86,7 @@ if (empty($_SESSION['session_id'])) {
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Telefone do 2º responsável</label>
-          <input type="number" class="form-control" name="telefone-responsavel2" minlength="11" maxlength="11"
+          <input type="text" class="form-control" name="telefone-responsavel2" minlength="11" maxlength="11"
             id="exampleInputTelefone1" placeholder="Telefone do 2º responsável" value="71983442945">
         </div>
         <div class="form-group">
