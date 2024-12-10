@@ -1,4 +1,5 @@
 create database elao;
+
 use elao;
 
 create table
@@ -33,8 +34,8 @@ Values
         "1982-12-10",
         "admin"
     );
-    
-    insert into
+
+insert into
     diretoria (
         nome_func,
         email_pess_func,
@@ -75,14 +76,14 @@ create table
         email_pess_aluno varchar(100),
         email_estd_aluno varchar(100),
         cpf_aluno varchar(11) not null unique,
-        sexo_aluno Enum("Masculino", "Feminino", "Outro") not null,
+        sexo_aluno Enum ("Masculino", "Feminino", "Outro") not null,
         turma_aluno int not null,
-        nome_resposavel1 varchar(150) not null,
-        telefone_resposvael1 bigint not null,
-        parentesco_responsavel1 varchar(50) not null,
-        nome_resposavel2 varchar(150),
-        telefone_resposvael2 bigint,
-        parentesco_responsavel2 varchar(50),
+        nome_responsavel varchar(150) not null,
+        telefone_responsavel bigint not null,
+        parentesco_responsavel varchar(50) not null,
+        nome_responsavel2 varchar(150),
+        telefone_responsavel2 bigint,
+        parentesco_responsave2 varchar(50),
         senha_aluno varchar(25) not null
     );
 
@@ -280,3 +281,4 @@ create table
         a10h25 varchar(50) not null,
         a11h10 varchar(50) not null
     );
+    SELECT id_aluno FROM alunos ORDER BY id_aluno DESC LIMIT 1
