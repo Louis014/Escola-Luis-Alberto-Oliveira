@@ -66,8 +66,7 @@ VALUES (:nome_aluno, :email_pess_aluno, :email_estd_aluno, :cpf_aluno, :sexo_alu
             if ($sql->rowCount() === 1) {
                 $retorna = [
                     'status' => true,
-                    'msg' => "O Aluno foi matriculado. Dados do aluno: E-mail: " . $email_estd . " Senha: " . $cpf
-                ];
+                    'msg' => "O Aluno foi matriculado. Dados do aluno: E-mail: " . $email_estd . " Senha: CPF do Aluno"];
 
                 header('Content-Type: application/json');
                 echo json_encode($retorna);
