@@ -4,10 +4,10 @@ session_start();
 // var_dump(($_SESSION['session_email']));
 // var_dump(($_SESSION['session_id']));
 
-if (empty($_SESSION['session_id'])) {
-  header('Location: /');
-  exit();
-}
+//if (empty($_SESSION['session_id'])) {
+//  header('Location: /');
+ // exit();
+//}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

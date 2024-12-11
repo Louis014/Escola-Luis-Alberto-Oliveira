@@ -2,7 +2,7 @@ create database elao;
 use elao;
 
 
-DELETE FROM `elao`.`alunos` WHERE (`email_pess_aluno` = 'pedruuu291@gmail.com');
+-- DELETE FROM `elao`.`alunos` WHERE (`email_pess_aluno` = 'pedruuu291@gmail.com');
 
 
 create table

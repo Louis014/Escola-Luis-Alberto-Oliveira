@@ -20,7 +20,6 @@
     <section class= "botoes">
         <div class="colunabtn">
         <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/add-svgrepo-com.svg">Alunos</button></a>
-        <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/date-range-svgrepo-com.svg">Professores</button></a>
         <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/notas.png">Notas</button></a>
         </div>
         <div class="colunabtn">
