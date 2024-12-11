@@ -17,13 +17,13 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylematricula.css">
-  <title>Luis Alberto Oliveira | Matricular</title>
+  <link rel="stylesheet" href="style.css">
+  <title>ELAO | Adicionar Professor</title>
 </head>
 
 <body>
   <header>
-    <img src="../../../assets/images/LogoEscolaSemFundo.png" alt="Logo da Clinica" class="LogoClinica">Matricular
+    <img src="../../../assets/images/LogoEscolaSemFundo.png" alt="Logo da Clinica" class="LogoClinica">Adicionar Professor
     <div class="areauser">
       <p class="nomeuser">Olá, <?php echo isset($_SESSION['session_nome']) ? explode(' ', $_SESSION['session_nome'])[0] : 'Usuário'; ?></p>
       <a href="../../scripts/sair.php"><img src="../../../assets/images/logout-svgrepo-com.svg" alt="Sair" class="logouticon">
@@ -54,46 +54,36 @@ session_start();
             <option value="O">Outro</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Turma</label>
-          <select class="form-control" name="turma" id="turma">
-            <!-- <option value="">Selecione a turma do aluno...</option> -->
-            <option value="6">6º Ano</option>
-            <option value="7">7º Ano</option>
-            <option value="8">8º Ano</option>
-            <option value="9">9º Ano</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nome do 1º responsável</label>
-          <input type="text" class="form-control" name="nome-responsavel" id="exampleInputEmail1" placeholder="Insira o nome do responsável" value="Pica">
-        </div>
       </div>
       <div class="coluna">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Telefone do 1º responsável</label>
-          <input type="text" class="form-control" name="telefone-responsavel" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone do 1º responsável" value="71983442945">
+      <div class="form-group">
+          <label for="exampleInputEmail1">Matéria</label>
+          <select class="form-control" name="turma" id="turma">
+            <option value="">Selecione uma matéria</option>
+            <option value="Arte">Artes</option>
+            <option value="Ciências">Ciências</option>
+            <option value="Educacao_Fisica">Educação Física</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Historia">História</option>
+            <option value="Ingles">Inglês</option>
+            <option value="Ensino_Religioso">Ensino Religioso</option>
+            <option value="Espanhol">Espanhol</option>
+            <option value="Portugues">Português</option>
+            <option value="Matematica">Matemática</option>
+          </select>
+        </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Data de nascimento</label>
+          <input type="date" class="form-control" name="datanasc" id="exampleInputEmail1" required>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Parentesco do 1º responsável</label>
-          <input type="text" class="form-control" name="parentesco-responsavel" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..." value="Adotador">
+          <label for="exampleInputEmail1">Telefone</label>
+          <input type="text" class="form-control" name="telefone-professor" minlength="11" maxlength="11"
+            id="exampleInputTelefone1" placeholder="Telefone" value="71983442945">
         </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nome do 2º responsável</label>
-          <input type="text" class="form-control" name="nome-responsavel2" id="exampleInputEmail1" placeholder="Insira o nome do responsável" value="Dura">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Telefone do 2º responsável</label>
-          <input type="text" class="form-control" name="telefone-responsavel2" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável" value="71983442945">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Parentesco do 2º responsável</label>
-          <input type="text" class="form-control" name="parentesco-responsavel2" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..." value="Jack">
-        </div>
+        
         <div class="contBotao">
-          <button type="submit" class="btnMatricular">Matricular</button>
+          <button type="submit" class="btnMatricular">Cadastrar</button>
         </div>
       </div>
     </form>

@@ -64,12 +64,14 @@ create table
         id_professor int auto_increment primary key,
         nome_professor varchar(200) not null,
         materia varchar(50) not null,
-        email_pess_professor varchar(100) not null unique,
-        email_corp_professor varchar(100) not null unique,
-        telefone_professor bigint not null,
+        email_pess_professor VARCHAR(255) UNIQUE NOT NULL,
+        email_corp_professor VARCHAR(255) UNIQUE NOT NULL,
+        telefone_professor VARCHAR(11) NOT NULL,
         cpf_professor varchar(11) not null unique,
         nascimento_professor date not null,
-        senha_professor varchar(25) not null
+        sexo_professor VARCHAR(3) not null,
+        senha_professor varchar(25) not null,
+        data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
 create table
@@ -93,15 +95,16 @@ create table
 
 create table
     apoio (
-        id_func bigint auto_increment primary key,
-        nome_func varchar(70) not null,
-        email_pess_func varchar(100) not null unique,
-        email_corp_func varchar(100) not null unique,
-        telefone_func bigint not null,
-        cpf_func varchar(11) not null unique,
-        nascimento_func date not null,
-        senha_func varchar(25) not null,
-        cargo_func varchar(100) not null
+        id_func INT PRIMARY KEY AUTO_INCREMENT,
+        nome_func VARCHAR(70) NOT NULL,
+        email_pess_func VARCHAR(150) UNIQUE NOT NULL,
+        email_corp_func VARCHAR(150) UNIQUE NOT NULL,
+        telefone_func VARCHAR(11) NOT NULL,
+        cpf_func VARCHAR(11) NOT NULL,
+        nascimento_func DATE NOT NULL,
+        senha_func VARCHAR(128) NOT NULL,
+        cargo_func VARCHAR(100) NOT NULL,
+        data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
 -- Tabela de notas de Arte com a coluna 'turma'
@@ -117,7 +120,6 @@ CREATE TABLE
         foreign key (id_aluno_fk) references alunos (id_aluno)
     );
 
--- Tabela de notas de Ciências com a coluna 'turma'
 CREATE TABLE
     notas_Ciencias (
         id_aluno_fk INT PRIMARY KEY,

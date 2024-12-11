@@ -129,6 +129,10 @@ input {
     min-width: 36rem;
     max-width: 36rem;
   }
+  .nomeuser{
+    visibility: hidden;
+  }
+ 
   .form-cad {
     gap: 0.5rem;
   }
