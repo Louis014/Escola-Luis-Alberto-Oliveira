@@ -34,14 +34,14 @@ session_start();
         <tr>
           <th  class="cabecalhotable" scope="col">Id</th>
           <th  class="cabecalhotable" scope="col">Nome</th>
-          <th  class="cabecalhotable" scope="col">Matéria</th>
+          <th  class="cabecalhotable" scope="col">Cargo</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>ID</td>
           <td>NOME</td>
-          <td>MATERIA</td>
+          <td>CARGO</td>
           <td><a href="detalhes.php?id_professor=<?=$a['id_professor']; ?>"><button class="btnVerMais" >Ver +</button></a></td>
         </tr>
       </tbody>

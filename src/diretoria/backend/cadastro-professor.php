@@ -26,12 +26,13 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (!empty($cpf)) {
     try {
-        $sql = $pdo->prepare("SELECT * FROM professores WHERE cpf_professor = :cpf_professor");
+        $sql = $pdo->prepare("SELECT * FROM professores WHERE cpf_professor = :cpf_professor AND email_pess_professor = :email_pess_professor");
         $sql->bindValue(':cpf_professor', $cpf);
+        $sql->bindValue(':email_pess_professor', $email);
         $sql->execute();
 
         if ($sql->rowCount() === 1) {
-            $retorna = ['status' => false, 'msg' => "Já existe um Professor(a) cadastrado com esse CPF."];
+            $retorna = ['status' => false, 'msg' => "Já existe um Professor(a) cadastrado com esse E-mail ou CPF."];
             header('Content-Type: application/json');
             echo json_encode($retorna);
             exit();
@@ -57,8 +58,7 @@ if (!empty($cpf)) {
             if ($sql->rowCount() === 1) {
                 $retorna = [
                     'status' => true,
-                    'msg' => "O Professor(a) foi matriculado. Dados do Professor(a): E-mail: " . $email_estd . " Senha: CPF do Professor(a)"
-                ];
+                    'msg' => "O Professor(a) foi matriculado. Dados do Professor(a): E-mail: " . $email_corp_professor . " Senha: CPF do Professor(a)"];
 
                 header('Content-Type: application/json');
                 echo json_encode($retorna);

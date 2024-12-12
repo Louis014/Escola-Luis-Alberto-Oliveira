@@ -29,12 +29,12 @@ session_start();
         <div class="colunabtn">
             <a href="cadastro-aluno/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addaluno.png">Matricular</button></a>
             <a href="cadastro-professor/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/novoprofessor.png">Adicionar Professor</button></a>
-            <a href="cadastro-funcionario"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
+            <a href="cadastro-funcionario/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
         </div>
         <div class="colunabtn">
             <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>
             <a href="ver-professores/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/professores.png">Professores</button></a>
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/func.png">Funcionários</button></a>
+            <a href="ver-funcionarios/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/func.png">Funcionários</button></a>
         </div>
         <div class="colunabtn">
             <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/notas.png">Notas</button></a>

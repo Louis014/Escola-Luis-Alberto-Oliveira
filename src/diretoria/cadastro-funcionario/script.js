@@ -7,16 +7,16 @@ if (formcad) {
     const dadosForm = new FormData(formcad);
 
     const nome = dadosForm.get("nome");
-    const materia = dadosForm.get("materia");
+    const cargo = dadosForm.get("cargo");
     const email_pessoal = dadosForm.get("email-pessoal");
     const cpf = dadosForm.get("cpf");
     const sexo = dadosForm.get("sexo");
-    const data_nascimento = dadosForm.get("data_nascimento");
+    const data_nascimento = dadosForm.get("data-nascimento");
     const telefone = dadosForm.get("telefone");
 
     if (
       !nome ||
-      !materia ||
+      !cargo ||
       !email_pessoal ||
       !cpf ||
       !sexo ||
@@ -33,7 +33,7 @@ if (formcad) {
     }
 
     try {
-      const dados = await fetch("../backend/cadastro-professor.php", {
+      const dados = await fetch("../backend/cadastro-funcionario.php", {
         method: "POST",
         body: dadosForm,
       });

@@ -57,7 +57,7 @@
       <div class="coluna">
         <div class="form-group">
           <label for="exampleInputEmail1">Cargo</label>
-          <select class="form-control" name="turma" id="turma">
+          <select class="form-control" name="cargo" id="cargo">
             <option value="">Selecione um cargo</option>
             <option value="ASG">Aux de Serviços Gerais</option>
             <option value="Porteiro">Porteiro(a)</option>
@@ -69,11 +69,11 @@
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Data de nascimento</label>
-          <input type="date" class="form-control" name="datanasc" id="exampleInputEmail1">
+          <input type="date" class="form-control" name="data-nascimento" id="exampleInputEmail1" value="2011-09-11">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Telefone</label>
-          <input type="text" class="form-control" name="telefone-professor" minlength="11" maxlength="11"
+          <input type="text" class="form-control" name="telefone" minlength="11" maxlength="11"
             id="exampleInputTelefone1" placeholder="Telefone" value="71983442945">
         </div>
 

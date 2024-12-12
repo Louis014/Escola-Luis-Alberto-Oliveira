@@ -46,7 +46,7 @@
         <div class="form-group">
           <label for="exampleInputPassword1">Sexo</label>
           <select class="form-control" name="sexo" id="sexo">
-            <!-- <option value="">Selecione um gênero</option> -->
+            <option value="">Selecione uma gênero...</option> 
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
             <option value="O">Outro</option>
@@ -57,7 +57,7 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Matéria</label>
           <select class="form-control" name="materia" id="materia">
-            <!-- <option value="">Selecione uma matéria</option> -->
+            <option value="">Selecione uma matéria...</option>
             <option value="Arte">Artes</option>
             <option value="Ciências">Ciências</option>
             <option value="Educacao_Fisica">Educação Física</option>
