@@ -103,6 +103,8 @@ text-align: center;
   border: none;
   transition: 300ms;
   color: white;
+  justify-items: center;
+  justify-content: center;
 }
 .btnExcluir:hover{
   min-width: 15rem;

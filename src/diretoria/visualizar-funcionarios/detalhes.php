@@ -23,6 +23,15 @@ if ($sql->rowCount() == 1) {
     $cargo_func = $usuario['cargo_func'];
 }
 
+if (
+    empty($nome_func) || empty($email_pess_func) || empty($email_corp_func) || empty($telefone_func) || empty($cpf_func)
+    || empty($sexo_func) || empty($nascimento_func) || empty($cargo_func)
+) {
+    header('Location: index.php');
+    exit();
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -88,7 +97,7 @@ if ($sql->rowCount() == 1) {
             </div>
         </form>
 
-        <form action="../backend/excluir-funcionario.php" method="POST" class="excluir-func" id="excluir-func"> 
+        <form action="../backend/excluir-funcionario.php" method="POST" class="excluir-func" id="excluir-func">
             <input type="hidden" value="<?php echo !empty($_GET['id_func']) ? $_GET['id_func'] : null; ?>" id="id_func" class="id_func" name="id_func">
             <button type="submit" class="btnExcluir">Excluir</button>
             <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>

@@ -5,6 +5,8 @@ use elao;
 -- DELETE FROM `elao`.`alunos` WHERE (`email_pess_aluno` = 'pedruuu291@gmail.com');
 
 
+SELECT * FROM alunos WHERE turma_aluno = 6;
+
 create table
     diretoria (
         id_func INT auto_increment primary key,

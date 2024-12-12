@@ -1,8 +1,8 @@
 <?php
 session_start();
 //if (!empty($_SESSION['session_id'])) {
-  //  header('Location: src/diretoria/');
-    //exit();
+//  header('Location: src/diretoria/');
+//exit();
 //}
 ?>
 <!DOCTYPE html>
@@ -29,14 +29,6 @@ session_start();
             <div class="form-group">
                 <input type="senha" class="form-control" name="senha" id="senha"
                     placeholder="Senha" value="Chicote1@">
-            </div>
-            <div class="form-group">
-                <select class="form-control" name="nivel">
-                    <option value="">Selecione o seu nível...</option>
-                    <option value="1">Diretoria</option>
-                    <option value="2">Professor(a)</option>
-                    <option value="3">Aluno(a)</option>
-                </select>
             </div>
             <button type="submit" class="btnLogin">Entrar</button>
         </form>

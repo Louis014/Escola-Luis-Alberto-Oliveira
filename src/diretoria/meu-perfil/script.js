@@ -1,15 +1,15 @@
-const excluir_func = document.querySelector(".excluir-func");
+const form_atualizar_email = document.querySelector("#form-cad");
 
-if (excluir_func) {
-  excluir_func.addEventListener("submit", async (e) => {
+if (form_atualizar_email) {
+  form_atualizar_email.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const dadosForm = new FormData(excluir_func);
+    const dadosForm = new FormData(form_atualizar_email);
 
-    const id_func = dadosForm.get("id_func");
+    const email_pessoal = dadosForm.get("email-pessoal");
 
     try {
-      const dados = await fetch("../backend/excluir-funcionario.php", {
+      const dados = await fetch("../backend/atualizar-email.php", {
         method: "POST",
         body: dadosForm,
       });
@@ -22,7 +22,7 @@ if (excluir_func) {
         confirmButtonColor: "#3085d6",
         confirmButtonText: "Fechar",
       }).then(() => {
-        window.location.href = "index";
+        location.reload();
       });
     } catch (error) {
       Swal.fire({

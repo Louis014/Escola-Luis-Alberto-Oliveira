@@ -99,6 +99,7 @@ text-align: center;
   border: none;
   transition: 300ms;
   color: white;
+  text-align: center;
 }
 .btnExcluir:hover{
   min-width: 15rem;

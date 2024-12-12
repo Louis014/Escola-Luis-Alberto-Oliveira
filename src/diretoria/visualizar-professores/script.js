@@ -1,15 +1,15 @@
-const excluir_func = document.querySelector(".excluir-func");
+const excluir_professor = document.querySelector("#excluir-professor");
 
-if (excluir_func) {
-  excluir_func.addEventListener("submit", async (e) => {
+if (excluir_professor) {
+  excluir_professor.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const dadosForm = new FormData(excluir_func);
+    const dadosForm = new FormData(excluir_professor);
 
-    const id_func = dadosForm.get("id_func");
+    const id_professor = dadosForm.get("id_professor");
 
     try {
-      const dados = await fetch("../backend/excluir-funcionario.php", {
+      const dados = await fetch("../backend/excluir-professor.php", {
         method: "POST",
         body: dadosForm,
       });

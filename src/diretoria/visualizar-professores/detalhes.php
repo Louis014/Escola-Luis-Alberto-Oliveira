@@ -1,17 +1,37 @@
 <?php
+require '../../scripts/conn.php';
 session_start();
 //if (empty($_SESSION['session_id'])) {
 // header('Location: ../../../');
 // exit();
 //}
+$id_prof = $_GET['id_professor'];
 
-//require 'configPDO.php';
-//$id = $_REQUEST["id_professor"];
-//$dados = []; 
-//$sql = $pdo->prepare("SELECT * FROM tbprodutos WHERE Id_Produto = :id");
-//$sql->bindValue(":id", $id);
-//$sql->execute();
-//$dados = $sql->fetch(PDO::FETCH_ASSOC);
+$sql = $pdo->prepare("SELECT * FROM professores WHERE id_professor = :id_professor");
+$sql->bindValue(':id_professor', $id_prof);
+$sql->execute();
+
+if ($sql->rowCount() == 1) {
+    $usuario = $sql->fetch(PDO::FETCH_BOTH);
+    $nome_professor = $usuario['nome_professor'];
+    $materia = $usuario['materia'];
+    $email_pess_professor = $usuario['email_pess_professor'];
+    $email_corp_professor = $usuario['email_corp_professor'];
+    $telefone_professor = $usuario['telefone_professor'];
+    $cpf_professor = $usuario['cpf_professor'];
+    $nascimento_professor = $usuario['nascimento_professor'];
+    $sexo_professor = $usuario['sexo_professor'];
+}
+
+// if (
+//     empty($nome_func) || empty($email_pess_func) || empty($email_corp_func) || empty($telefone_func) || empty($cpf_func)
+//     || empty($sexo_func) || empty($nascimento_func) || empty($cargo_func)
+// ) {
+//     header('Location: index.php');
+//     exit();
+// }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,43 +61,46 @@ session_start();
             <div class="coluna">
                 <div class="form-group">
                     <label for="exampleInputNome1">Nome completo</label>
-                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo" value="<?php echo ($nome_professor) ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputNome1">E-mail pessoal</label>
-                    <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="<?php echo ($email_pess_professor) ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputNome1">E-mail corporativo</label>
-                    <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="<?php echo ($email_corp_professor) ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">CPF</label>
-                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" value="<?php echo ($cpf_professor) ?>" disabled>
                 </div>
             </div>
             <div class="coluna">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Matéria</label>
-                    <input class="form-control" name="materia" id="materia" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input class="form-control" name="materia" id="materia" value="<?php echo ($materia) ?>" disabled>
 
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Data de nascimento</label>
-                    <input type="text" class="form-control" name="data-nascimento" id="exampleInputEmail1" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="data-nascimento" id="exampleInputEmail1" value="<?php echo ($nascimento_professor) ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Telefone</label>
-                    <input type="text" class="form-control" name="telefone" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input type="text" class="form-control" name="telefone" value="<?php echo ($telefone_professor) ?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Sexo</label>
-                    <input class="form-control" name="sexo" id="sexo" value="ALTERAR PARA OQ VEM DO BANCO" disabled>
+                    <input class="form-control" name="sexo" id="sexo" value="<?php echo ($sexo_professor) ?>" disabled>
                 </div>
             </div>
         </form>
-        <button type="submit" class="btnExcluir">Excluir</button>
-        <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>
+        <form action="../backend/excluir-professor.php" ethod="POST" class="excluir-professor" id="excluir-professor">
+            <button type="submit" class="btnExcluir" id="#btn-excluir">Excluir</button>
+            <input type="hidden" value="<?php echo !empty($_GET['id_professor']) ? $_GET['id_professor'] : null; ?>" id="id_prof" class="id_prof" name="id_prof">
+            <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>
+        </form>
     </div>
 
 

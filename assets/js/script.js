@@ -8,9 +8,8 @@ if (form_login) {
 
     const email = dadosForm.get("email");
     const senha = dadosForm.get("senha");
-    const nivel = dadosForm.get("nivel");
 
-    if (!email || !senha || !nivel) {
+    if (!email || !senha) {
       Swal.fire({
         text: "Preencha todos os campos.",
         icon: "error",

@@ -6,15 +6,21 @@ session_start();
 // exit();
 //}
 // TROCAR IF ABAIXO PELO ELSE
-if (1 > 0) {
-  $sql = $pdo->prepare("SELECT * FROM professores");
-  $sql->execute();
-  $professores = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-  if (count($professores) > 0) {
-    $_SESSION['professores'] = $professores;
+$turma_aluno = $_GET['turma_aluno'];
+
+if (empty($turma_aluno)) {
+  header('Location: index.php');
+} else {
+  $sql = $pdo->prepare("SELECT * FROM alunos WHERE turma_aluno = :turma_aluno");
+  $sql->bindValue(':turma_aluno', $turma_aluno);
+  $sql->execute();
+  $turma_6ano = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+  if (count($turma_6ano) > 0) {
+    $_SESSION['turma'] = $turma_6ano;
   } else {
-    $_SESSION['professores'] = [];
+    $_SESSION['turma'] = [];
   }
 }
 ?>
@@ -49,12 +55,12 @@ if (1 > 0) {
           <th class="cabecalhotable" scope="col">Nome</th>
         </tr>
       </thead>
-      <?php if (count($professores) > 0): ?>
-        <?php foreach ($professores as $professor): ?>
+      <?php if (count($turma_6ano) > 0): ?>
+        <?php foreach ($turma_6ano as $turma): ?>
           <tbody>
             <tr>
-              <td><?= htmlspecialchars($professor['id_professor']) ?></td>
-              <td><?= htmlspecialchars($professor['nome_professor']) ?></td>
+              <td><?= htmlspecialchars($turma['id_aluno']) ?></td>
+              <td><?= htmlspecialchars($turma['nome_aluno']) ?></td>
               <td><a href="detalhes.php?id_professor=<?= $a = $professor['id_professor']; ?>"><button class="btnVerMais">Ver +</button></a></td>
             <?php endforeach; ?>
           <?php endif; ?>

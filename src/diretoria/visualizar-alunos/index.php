@@ -1,8 +1,8 @@
 <?php
 session_start();
 //if (empty($_SESSION['session_id'])) {
-  //  header('Location: ../../');
-  //  exit();
+//  header('Location: ../../');
+//  exit();
 //}
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ session_start();
         <div class="colunabtn">
             <a href="detalhes.php?turma_aluno=<?= $a = 6 ?>"><button class="btnmenu">6º ANO</button></a>
             <a href="detalhes.php?turma_aluno=<?= $a = 7 ?>"><button class="btnmenu">7º ANO</button></a>
-           
+
         </div>
         <div class="colunabtn">
             <a href="detalhes.php?turma_aluno=<?= $a = 8 ?>"><button class="btnmenu">8º ANO</button></a>
