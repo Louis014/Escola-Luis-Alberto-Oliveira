@@ -133,7 +133,7 @@ input {
   color: black;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1080px) {
   .form-cad {
     flex-direction: column;
   }

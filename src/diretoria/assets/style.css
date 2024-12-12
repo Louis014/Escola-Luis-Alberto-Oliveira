@@ -116,7 +116,7 @@ a{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
     .LogoClinica {
         width: 45px;
         margin-left: 1rem;
