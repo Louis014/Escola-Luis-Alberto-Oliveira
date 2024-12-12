@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: gainsboro;
+}
+
+header {
+  background-color: #162a3d;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: -0.5rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.opcvoltar{
+  margin-top: 2rem;
+  margin-left: 10rem;
+}
+
+.LogoClinica {
+  width: 60px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.areauser {
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logouticon {
+  height: 30px;
+}
+
+a {
+  margin-top: 0.3rem;
+  text-decoration: none;
+}
+.txtsair {
+  text-decoration: none;
+  font-size: 11px;
+  margin-top: -0.8rem;
+  margin-left: -0.4rem;
+  color: white;
+}
+
+.container {
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1.5%;
+  max-width: 100rem;
+  min-width: 25rem;
+  max-height: 100rem;
+  min-height: 50rem;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 2.3rem;
+}
+
+.btnVerMais{
+  min-width: 8rem;
+  background-color: #162A3D;
+  font-weight: 600;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  transition: 300ms;
+  color: white;
+}
+
+.btnVerMais:hover{
+  min-width: 8rem;
+  background-color: #AFBFCA;
+  font-weight: 700;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  transition: 300ms;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .form-cad {
+    flex-direction: column;
+  }
+  input {
+    max-width: 28rem;
+    min-width: 28rem;
+  }
+  .container {
+    min-width: 36rem;
+    max-width: 36rem;
+    margin-top: 2rem;
+  }
+  .nomeuser{
+    visibility: hidden;
+  }
+  .opcvoltar{
+    margin-left: 2rem;
+  }
+  .form-cad {
+    gap: 0.5rem;
+  }
+  .btnCadastrarse {
+    min-width: 22rem;
+    min-height: 5.5rem;
+    background-color: #66a486;
+    font-weight: 600;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    transition: 300ms;
+    color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btnCadastrarse:hover {
+    min-width: 25rem;
+    background-color: #a8d5ba;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    transition: 300ms;
+  }
+}
