@@ -33,19 +33,19 @@
     <form class="form-cad" id="form-cad" action="../backend/cadastro-professor.php" method="POST">
       <div class="coluna">
         <div class="form-group">
-          <label for="exampleInputNome1">Nome completo</label>
-          <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo" value="pedrao">
+          <label for="exampleInputNome1">Nome completo*</label>
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo">
         </div>
         <div class="form-group">
-          <label for="exampleInputNome1">E-mail</label>
-          <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="pedruuu291@gmail.com">
+          <label for="exampleInputNome1">E-mail*</label>
+          <input type="email" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">CPF</label>
-          <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" value="43840082013">
+          <label for="exampleInputEmail1">CPF*</label>
+          <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" maxlength=11 minlength=11>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Sexo</label>
+          <label for="exampleInputPassword1">Gênero*</label>
           <select class="form-control" name="sexo" id="sexo">
             <option value="">Selecione um gênero</option>
             <option value="M">Masculino</option>
@@ -56,7 +56,7 @@
       </div>
       <div class="coluna">
         <div class="form-group">
-          <label for="exampleInputEmail1">Cargo</label>
+          <label for="exampleInputEmail1">Cargo*</label>
           <select class="form-control" name="cargo" id="cargo">
             <option value="">Selecione um cargo</option>
             <option value="ASG">Aux de Serviços Gerais</option>
@@ -68,13 +68,13 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Data de nascimento</label>
-          <input type="date" class="form-control" name="data-nascimento" id="exampleInputEmail1" value="2011-09-11">
+          <label for="exampleInputEmail1">Data de nascimento*</label>
+          <input type="date" class="form-control" name="data-nascimento" id="exampleInputEmail1">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Telefone</label>
+          <label for="exampleInputEmail1">Telefone*</label>
           <input type="text" class="form-control" name="telefone" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone" value="71983442945">
+            id="exampleInputTelefone1" placeholder="Telefone">
         </div>
 
         <div class="contBotao">

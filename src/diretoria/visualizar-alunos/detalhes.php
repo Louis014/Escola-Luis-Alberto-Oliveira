@@ -38,7 +38,7 @@ if (empty($turma_aluno)) {
 
 <body>
   <header>
-    <img src="../../../assets/images/LogoEscolaSemFundo.png" alt="Logo da Clinica" class="LogoClinica">Professores
+    <img src="../../../assets/images/LogoEscolaSemFundo.png" alt="Logo da Clinica" class="LogoClinica">Alunos
     <div class="areauser">
       <p class="nomeuser">Olá, <?php echo isset($_SESSION['session_nome']) ? explode(' ', $_SESSION['session_nome'])[0] : 'Usuário'; ?></p>
       <a href="../../scripts/sair.php"><img src="../../../assets/images/logout-svgrepo-com.svg" alt="Sair" class="logouticon">
@@ -46,13 +46,14 @@ if (empty($turma_aluno)) {
       </a>
     </div>
   </header>
-  <div class="opcvoltar"><a href="../"><<-Voltar </a></div>
+  <div class="opcvoltar"><a href="index.php"><<-Voltar </a></div>
   <div class="container">
     <table class="table">
       <thead>
         <tr>
           <th class="cabecalhotable" scope="col">Matrícula</th>
           <th class="cabecalhotable" scope="col">Nome</th>
+          <th class="cabecalhotable" scope="col">Tel. Responsável</th>
         </tr>
       </thead>
       <?php if (count($turma_6ano) > 0): ?>
@@ -61,7 +62,7 @@ if (empty($turma_aluno)) {
             <tr>
               <td><?= htmlspecialchars($turma['id_aluno']) ?></td>
               <td><?= htmlspecialchars($turma['nome_aluno']) ?></td>
-              <td><a href="detalhes.php?id_professor=<?= $a = $professor['id_professor']; ?>"><button class="btnVerMais">Ver +</button></a></td>
+              <td><?= htmlspecialchars($turma['telefone_responsavel']) ?></td>
             <?php endforeach; ?>
           <?php endif; ?>
             </tr>

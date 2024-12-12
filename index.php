@@ -27,7 +27,7 @@ session_start();
                 <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="pedruuu291@gmail.com">
             </div>
             <div class="form-group">
-                <input type="senha" class="form-control" name="senha" id="senha"
+                <input type="password" class="form-control" name="senha" id="senha"
                     placeholder="Senha" value="Chicote1@">
             </div>
             <button type="submit" class="btnLogin">Entrar</button>

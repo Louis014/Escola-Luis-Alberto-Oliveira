@@ -32,19 +32,19 @@ session_start();
     <form class="form-cad" id="form-cad" action="../backend/cadastro-aluno.php" method="POST">
       <div class="coluna">
         <div class="form-group">
-          <label for="exampleInputNome1">Nome completo</label>
+          <label for="exampleInputNome1">Nome completo*</label>
           <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo">
         </div>
         <div class="form-group">
-          <label for="exampleInputNome1">E-mail</label>
-          <input type="text" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail" value="pedruuu291@gmail.com">
+          <label for="exampleInputNome1">E-mail*</label>
+          <input type="email" class="form-control" name="email-pessoal" id="email-pessoal" placeholder="Insira seu e-mail">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">CPF</label>
-          <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" value="43840082013">
+          <label for="exampleInputEmail1">CPF*</label>
+          <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira seu CPF" maxlength=11 minlength=11>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Sexo</label>
+          <label for="exampleInputPassword1">Gênero*</label>
           <select class="form-control" name="sexo" id="sexo">
             <option value="">Selecione o sexo do aluno...</option>
             <option value="M">Masculino</option>
@@ -53,7 +53,7 @@ session_start();
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Turma</label>
+          <label for="exampleInputEmail1">Turma*</label>
           <select class="form-control" name="turma" id="turma">
             <option value="">Selecione a turma do aluno...</option>
             <option value="6">6º Ano</option>
@@ -63,32 +63,32 @@ session_start();
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Nome do 1º responsável</label>
-          <input type="text" class="form-control" name="nome-responsavel" id="exampleInputEmail1" placeholder="Insira o nome do responsável" value="Pica">
+          <label for="exampleInputEmail1">Nome do 1º responsável*</label>
+          <input type="text" class="form-control" name="nome-responsavel" id="exampleInputEmail1" placeholder="Insira o nome do responsável">
         </div>
       </div>
       <div class="coluna">
         <div class="form-group">
-          <label for="exampleInputEmail1">Telefone do 1º responsável</label>
+          <label for="exampleInputEmail1">Telefone do 1º responsável*</label>
           <input type="text" class="form-control" name="telefone-responsavel" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone do 1º responsável" value="71983442945">
+            id="exampleInputTelefone1" placeholder="Telefone do 1º responsável">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Parentesco do 1º responsável</label>
-          <input type="text" class="form-control" name="parentesco-responsavel" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..." value="Adotador">
+          <label for="exampleInputEmail1">Parentesco do 1º responsável*</label>
+          <input type="text" class="form-control" name="parentesco-responsavel" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô...">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Nome do 2º responsável</label>
-          <input type="text" class="form-control" name="nome-responsavel2" id="exampleInputEmail1" placeholder="Insira o nome do responsável" value="Dura">
+          <label for="exampleInputEmail1">Nome do 2º responsável*</label>
+          <input type="text" class="form-control" name="nome-responsavel2" id="exampleInputEmail1" placeholder="Insira o nome do responsável">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Telefone do 2º responsável</label>
+          <label for="exampleInputEmail1">Telefone do 2º responsável*</label>
           <input type="text" class="form-control" name="telefone-responsavel2" minlength="11" maxlength="11"
-            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável" value="71983442945">
+            id="exampleInputTelefone1" placeholder="Telefone do 2º responsável">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail1">Parentesco do 2º responsável</label>
-          <input type="text" class="form-control" name="parentesco-responsavel2" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô..." value="Jack">
+          <label for="exampleInputEmail1">Parentesco do 2º responsável*</label>
+          <input type="text" class="form-control" name="parentesco-responsavel2" id="exampleInputEndereco1" placeholder="Pai, Mãe, Avó, Avô...">
         </div>
         <div class="contBotao">
           <button type="submit" class="btnMatricular">Matricular</button>
