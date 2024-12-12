@@ -32,14 +32,13 @@ session_start();
             <a href="cadastro-funcionario/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
         </div>
         <div class="colunabtn">
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>
-            <a href="ver-professores/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/professores.png">Professores</button></a>
-            <a href="ver-funcionarios/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/func.png">Funcionários</button></a>
+            <a href="visualizar-alunos"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>
+            <a href="visualizar-professores/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/professores.png">Professores</button></a>
+            <a href="visualizar-funcionarios/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/func.png">Funcionários</button></a>
         </div>
         <div class="colunabtn">
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/notas.png">Notas</button></a>
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/date-range-svgrepo-com.svg">Cronogramas de aulas</button></a>
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/user-svgrepo-com.svg">Meu perfil</button></a>
+            <a target="_blank" href="../../database/Cronograma_de_aulas.pdf"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/date-range-svgrepo-com.svg">Cronogramas de aulas</button></a>
+            <a href="meu-perfil/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/user-svgrepo-com.svg">Meu perfil</button></a>
         </div>
     </section>
 </body>

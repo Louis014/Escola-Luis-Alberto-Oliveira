@@ -41,7 +41,7 @@ if (!empty($cpf)) {
             $sql->execute();
             $usuario = $sql->fetch(PDO::FETCH_BOTH);
             $id_func = $usuario ? $usuario['id_func'] + 1 : 1;
-            $email_corp_func = strtolower(str_replace(' ', '', trim($nome))) . strval($id_func) . '@elao.com';
+            $email_corp_func = strtolower(str_replace(' ', '', trim($nome))) . strval($id_func) . '.prof@elao.com';
 
             $sql = $pdo->prepare("INSERT INTO apoio (nome_func, email_pess_func, email_corp_func, telefone_func, cpf_func, sexo_func, nascimento_func, senha_func, cargo_func) VALUES (:nome_func, :email_pess_func, :email_corp_func, :telefone_func, :cpf_func, :sexo_func, :nascimento_func, :senha_func, :cargo_func) ");
             $sql->bindValue(':nome_func', $nome);

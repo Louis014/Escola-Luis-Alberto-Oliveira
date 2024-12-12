@@ -44,7 +44,7 @@ if (!empty($cpf)) {
             $sql->execute();
             $usuario = $sql->fetch(PDO::FETCH_BOTH);
             $id_aluno = $usuario ? $usuario['id_aluno'] + 1 : 1;
-            $email_estd = strtolower(str_replace(' ', '', trim($nome))) . strval($id_aluno) . '@elao.com';
+            $email_estd = strtolower(str_replace(' ', '', trim($nome))) . strval($id_aluno) . '.aluno@elao.com';
 
             $sql = $pdo->prepare("INSERT INTO alunos (nome_aluno, email_pess_aluno, email_estd_aluno, cpf_aluno, sexo_aluno, turma_aluno, nome_responsavel, telefone_responsavel, parentesco_responsavel, nome_responsavel2, telefone_responsavel2, parentesco_responsavel2, senha_aluno) 
 VALUES (:nome_aluno, :email_pess_aluno, :email_estd_aluno, :cpf_aluno, :sexo_aluno, :turma_aluno, :nome_responsavel, :telefone_responsavel, :parentesco_responsavel, :nome_responsavel2, :telefone_responsavel2, :parentesco_responsavel2, :senha_aluno)");

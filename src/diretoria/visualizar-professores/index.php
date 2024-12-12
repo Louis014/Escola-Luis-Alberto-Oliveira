@@ -1,9 +1,22 @@
 <?php
+require '../../scripts/conn.php';
 session_start();
 //if (empty($_SESSION['session_id'])) {
 // header('Location: ../../../');
 // exit();
 //}
+// TROCAR IF ABAIXO PELO ELSE
+if (1 > 0) {
+  $sql = $pdo->prepare("SELECT * FROM professores");
+  $sql->execute();
+  $professores = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+  if (count($professores) > 0) {
+    $_SESSION['professores'] = $professores;
+  } else {
+    $_SESSION['professores'] = [];
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,19 +45,23 @@ session_start();
     <table class="table">
       <thead>
         <tr>
-          <th  class="cabecalhotable" scope="col">Id</th>
-          <th  class="cabecalhotable" scope="col">Nome</th>
-          <th  class="cabecalhotable" scope="col">Matéria</th>
+          <th class="cabecalhotable" scope="col">Id</th>
+          <th class="cabecalhotable" scope="col">Nome</th>
+          <th class="cabecalhotable" scope="col">Matéria</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>ID</td>
-          <td>NOME</td>
-          <td>MATERIA</td>
-          <td><a href="detalhes.php?id_professor=<?=$a['id_professor']; ?>"><button class="btnVerMais" >Ver +</button></a></td>
-        </tr>
-      </tbody>
+      <?php if (count($professores) > 0): ?>
+        <?php foreach ($professores as $professor): ?>
+          <tbody>
+            <tr>
+              <td><?= htmlspecialchars($professor['id_professor']) ?></td>
+              <td><?= htmlspecialchars($professor['nome_professor']) ?></td>
+              <td><?= htmlspecialchars($professor['materia']) ?></td>
+              <td><a href="detalhes.php?id_professor=<?= $a = $professor['id_professor']; ?>"><button class="btnVerMais">Ver +</button></a></td>
+            <?php endforeach; ?>
+          <?php endif; ?>
+            </tr>
+          </tbody>
     </table>
     <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>
   </div>

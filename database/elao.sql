@@ -58,21 +58,23 @@ Values
         "1982-12-10",
         "Chicote1@"
     );
+    
 
-create table
-    professores (
-        id_professor int auto_increment primary key,
-        nome_professor varchar(200) not null,
-        materia varchar(50) not null,
-        email_pess_professor VARCHAR(255) UNIQUE NOT NULL,
-        email_corp_professor VARCHAR(255) UNIQUE NOT NULL,
-        telefone_professor VARCHAR(11) NOT NULL,
-        cpf_professor varchar(11) not null unique,
-        nascimento_professor date not null,
-        sexo_professor VARCHAR(3) not null,
-        senha_professor varchar(25) not null,
-        data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
-    );
+
+	create table
+		professores (
+			id_professor int auto_increment primary key,
+			nome_professor varchar(200) not null,
+			materia varchar(50) not null,
+			email_pess_professor VARCHAR(255) UNIQUE NOT NULL,
+			email_corp_professor VARCHAR(255) UNIQUE NOT NULL,
+			telefone_professor VARCHAR(11) NOT NULL,
+			cpf_professor varchar(11) not null unique,
+			nascimento_professor date not null,
+			sexo_professor VARCHAR(3) not null,
+			senha_professor varchar(25) not null,
+			data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+		);
 
 create table
     alunos (

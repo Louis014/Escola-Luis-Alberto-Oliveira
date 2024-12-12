@@ -41,7 +41,7 @@ if (!empty($cpf)) {
             $sql->execute();
             $usuario = $sql->fetch(PDO::FETCH_BOTH);
             $id_professor = $usuario ? $usuario['id_professor'] + 1 : 1;
-            $email_corp_professor = strtolower(str_replace(' ', '', trim($nome))) . strval($id_professor) . '@elao.com';
+            $email_corp_professor = strtolower(str_replace(' ', '', trim($nome))) . strval($id_professor) . 'func@elao.com';
 
             $sql = $pdo->prepare("INSERT INTO professores (nome_professor, email_pess_professor, email_corp_professor, cpf_professor, sexo_professor, materia, nascimento_professor, telefone_professor, senha_professor) VALUES (:nome_professor, :email_pess_professor, :email_corp_professor, :cpf_professor, :sexo_professor, :materia, :nascimento_professor, :telefone_professor, :senha_professor) ");
             $sql->bindValue(':nome_professor', $nome);
