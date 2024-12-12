@@ -24,7 +24,7 @@ exit();
         <h2 class="titulo">LOGIN</h2><br>
         <form class="cont-form" id="cont-form" action="src/scripts/login.php" method="POST">
             <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="luis.oliveira@gmail.com">
+                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" value="luis.1@elao.com">
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" name="senha" id="senha"
