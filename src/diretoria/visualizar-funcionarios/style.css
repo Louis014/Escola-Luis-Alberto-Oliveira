@@ -107,6 +107,9 @@ a {
   transition: 300ms;
   color: white;
 }
+.excluir-func{
+  text-align: center;
+}
 .form-cad {
   margin-top: 1rem;
   display: flex;

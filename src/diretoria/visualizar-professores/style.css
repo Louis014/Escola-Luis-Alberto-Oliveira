@@ -136,7 +136,9 @@ input {
   transition: 300ms;
   color: black;
 }
-
+.excluir-professor{
+  text-align: center;
+}
 @media (max-width: 1080px) {
   .form-cad {
     flex-direction: column;
