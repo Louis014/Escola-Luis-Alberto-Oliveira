@@ -1,14 +1,10 @@
 <?php
 session_start();
-// var_dump(($_SESSION['session_nome']));
-// var_dump(($_SESSION['session_email']));
-// var_dump(($_SESSION['session_id']));
-
-// if (empty($_SESSION['session_id'])) {
-//     header('Location: /');
-//     exit();
-// }
-// ?>
+//if (empty($_SESSION['session_id'])) {
+  //  header('Location: ../../');
+  //  exit();
+//}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +12,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <title>Luis Alberto Oliveira | Menu</title>
+    <title>ELAO | Menu</title>
 </head>
 
 <body>
@@ -31,9 +27,9 @@ session_start();
     </header>
     <section class="botoes">
         <div class="colunabtn">
-            <a href="cadastros/matricula.php"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addaluno.png">Matricular</button></a>
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/novoprofessor.png">Adicionar Professor</button></a>
-            <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
+            <a href="cadastro-aluno/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addaluno.png">Matricular</button></a>
+            <a href="cadastro-professor/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/novoprofessor.png">Adicionar Professor</button></a>
+            <a href="cadastro-funcionario"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
         </div>
         <div class="colunabtn">
             <a href=""><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>

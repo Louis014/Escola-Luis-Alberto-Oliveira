@@ -3,18 +3,14 @@ require '../../scripts/conn.php';
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $nome = $dados['nome'];
+$materia = $dados['materia'];
 $email = $dados['email-pessoal'];
 $cpf = $dados['cpf'];
 $sexo = $dados['sexo'];
-$turma = $dados['turma'];
-$nome_responsavel = $dados['nome-responsavel'];
-$telefone_responsavel = $dados['telefone-responsavel'];
-$parentesco_responsavel = $dados['parentesco-responsavel'];
-$nome_responsavel2 = $dados['nome-responsavel2'];
-$telefone_responsavel2 = $dados['telefone-responsavel2'];
-$parentesco_responsavel2 = $dados['parentesco-responsavel2'];
+$data_nascimento = $dados['data-nascimento'];
+$telefone = $dados['telefone'];
 
-if (empty($nome) || empty($cpf) || empty($sexo) || empty($turma) || empty($nome_responsavel) || empty($telefone_responsavel) || empty($parentesco_responsavel) || empty($nome_responsavel2) || empty($telefone_responsavel2) || empty($parentesco_responsavel2)) {
+if (empty($nome) || empty($email) || empty($cpf) || empty($sexo) || empty($materia) || empty($data_nascimento) || empty($telefone)) {
     $retorna = ['status' => false, 'msg' => "Você não preencheu todos os campos obrigatórios. Por favor, revise e envie novamente."];
     header('Content-Type: application/json');
     echo json_encode($retorna);
@@ -30,43 +26,39 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (!empty($cpf)) {
     try {
-        $sql = $pdo->prepare("SELECT * FROM alunos WHERE cpf_aluno = :cpf_aluno");
-        $sql->bindValue(':cpf_aluno', $cpf);
+        $sql = $pdo->prepare("SELECT * FROM professores WHERE cpf_professor = :cpf_professor");
+        $sql->bindValue(':cpf_professor', $cpf);
         $sql->execute();
 
         if ($sql->rowCount() === 1) {
-            $retorna = ['status' => false, 'msg' => "Já existe um aluno cadastrado com esse CPF."];
+            $retorna = ['status' => false, 'msg' => "Já existe um Professor(a) cadastrado com esse CPF."];
             header('Content-Type: application/json');
             echo json_encode($retorna);
             exit();
         } else {
-            $sql = $pdo->prepare("SELECT id_aluno FROM alunos ORDER BY id_aluno DESC LIMIT 1");
+            $sql = $pdo->prepare("SELECT id_professor FROM professores ORDER BY id_professor DESC LIMIT 1");
             $sql->execute();
             $usuario = $sql->fetch(PDO::FETCH_BOTH);
-            $id_aluno = $usuario ? $usuario['id_aluno'] + 1 : 1;
-            $email_estd = strtolower(str_replace(' ', '', trim($nome))) . strval($id_aluno) . '@elao.com';
+            $id_professor = $usuario ? $usuario['id_professor'] + 1 : 1;
+            $email_corp_professor = strtolower(str_replace(' ', '', trim($nome))) . strval($id_professor) . '@elao.com';
 
-            $sql = $pdo->prepare("INSERT INTO alunos (nome_aluno, email_pess_aluno, email_estd_aluno, cpf_aluno, sexo_aluno, turma_aluno, nome_responsavel, telefone_responsavel, parentesco_responsavel, nome_responsavel2, telefone_responsavel2, parentesco_responsavel2, senha_aluno) 
-VALUES (:nome_aluno, :email_pess_aluno, :email_estd_aluno, :cpf_aluno, :sexo_aluno, :turma_aluno, :nome_responsavel, :telefone_responsavel, :parentesco_responsavel, :nome_responsavel2, :telefone_responsavel2, :parentesco_responsavel2, :senha_aluno)");
-            $sql->bindValue(':nome_aluno', $nome);
-            $sql->bindValue(':email_pess_aluno', $email);
-            $sql->bindValue(':email_estd_aluno', $email_estd);
-            $sql->bindValue(':cpf_aluno', $cpf);
-            $sql->bindValue(':sexo_aluno', $sexo);
-            $sql->bindValue(':turma_aluno', $turma);
-            $sql->bindValue(':nome_responsavel', $nome_responsavel);
-            $sql->bindValue(':telefone_responsavel', $telefone_responsavel);
-            $sql->bindValue(':parentesco_responsavel', $parentesco_responsavel);
-            $sql->bindValue(':nome_responsavel2', $nome_responsavel2);
-            $sql->bindValue(':telefone_responsavel2', $telefone_responsavel2);
-            $sql->bindValue(':parentesco_responsavel2', $parentesco_responsavel2);
-            $sql->bindValue(':senha_aluno', $cpf);
+            $sql = $pdo->prepare("INSERT INTO professores (nome_professor, email_pess_professor, email_corp_professor, cpf_professor, sexo_professor, materia, nascimento_professor, telefone_professor, senha_professor) VALUES (:nome_professor, :email_pess_professor, :email_corp_professor, :cpf_professor, :sexo_professor, :materia, :nascimento_professor, :telefone_professor, :senha_professor) ");
+            $sql->bindValue(':nome_professor', $nome);
+            $sql->bindValue(':email_pess_professor', $email);
+            $sql->bindValue(':email_corp_professor', $email_corp_professor);
+            $sql->bindValue(':cpf_professor', $cpf);
+            $sql->bindValue(':sexo_professor', $sexo);
+            $sql->bindValue(':materia', $materia);
+            $sql->bindValue(':nascimento_professor', $data_nascimento);
+            $sql->bindValue(':telefone_professor', $telefone);
+            $sql->bindValue(':senha_professor', $cpf);
             $sql->execute();
 
             if ($sql->rowCount() === 1) {
                 $retorna = [
                     'status' => true,
-                    'msg' => "O Aluno foi matriculado. Dados do aluno: E-mail: " . $email_estd . " Senha: CPF do Aluno"];
+                    'msg' => "O Professor(a) foi matriculado. Dados do Professor(a): E-mail: " . $email_estd . " Senha: CPF do Professor(a)"
+                ];
 
                 header('Content-Type: application/json');
                 echo json_encode($retorna);

@@ -1,13 +1,9 @@
 <?php
-session_start();
-// var_dump(($_SESSION['session_nome']));
-// var_dump(($_SESSION['session_email']));
-// var_dump(($_SESSION['session_id']));
-
-//if (empty($_SESSION['session_id'])) {
-//  header('Location: /');
- // exit();
-//}
+// session_start();
+// if (empty($_SESSION['session_id'])) {
+//     header('Location: ../../../');
+//     exit();
+// }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,12 +27,13 @@ session_start();
       </a>
     </div>
   </header>
+  <div class="opcvoltar"><a href="../"><<-Voltar</a></div>
   <div class="container">
-    <form class="form-cad" id="form-cad" action="action.php" method="POST">
+    <form class="form-cad" id="form-cad" action="../backend/cadastro-professor.php" method="POST">
       <div class="coluna">
         <div class="form-group">
           <label for="exampleInputNome1">Nome completo</label>
-          <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo">
+          <input type="text" class="form-control" name="nome" id="nome" placeholder="Insira seu nome completo" value="pedrao">
         </div>
         <div class="form-group">
           <label for="exampleInputNome1">E-mail</label>
@@ -49,6 +46,7 @@ session_start();
         <div class="form-group">
           <label for="exampleInputPassword1">Sexo</label>
           <select class="form-control" name="sexo" id="sexo">
+            <!-- <option value="">Selecione um gênero</option> -->
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
             <option value="O">Outro</option>
@@ -56,32 +54,32 @@ session_start();
         </div>
       </div>
       <div class="coluna">
-      <div class="form-group">
+        <div class="form-group">
           <label for="exampleInputEmail1">Matéria</label>
-          <select class="form-control" name="turma" id="turma">
-            <option value="">Selecione uma matéria</option>
+          <select class="form-control" name="materia" id="materia">
+            <!-- <option value="">Selecione uma matéria</option> -->
             <option value="Arte">Artes</option>
             <option value="Ciências">Ciências</option>
             <option value="Educacao_Fisica">Educação Física</option>
             <option value="Geografia">Geografia</option>
             <option value="Historia">História</option>
             <option value="Ingles">Inglês</option>
-            <option value="Ensino_Religioso">Ensino Religioso</option>
+            <option value="Ensino-Religioso">Ensino Religioso</option>
             <option value="Espanhol">Espanhol</option>
             <option value="Portugues">Português</option>
             <option value="Matematica">Matemática</option>
           </select>
         </div>
-      <div class="form-group">
+        <div class="form-group">
           <label for="exampleInputEmail1">Data de nascimento</label>
-          <input type="date" class="form-control" name="datanasc" id="exampleInputEmail1" required>
+          <input type="date" class="form-control" name="data-nascimento" id="exampleInputEmail1" value="2007-02-15">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Telefone</label>
-          <input type="text" class="form-control" name="telefone-professor" minlength="11" maxlength="11"
+          <input type="text" class="form-control" name="telefone" minlength="11" maxlength="11"
             id="exampleInputTelefone1" placeholder="Telefone" value="71983442945">
         </div>
-        
+
         <div class="contBotao">
           <button type="submit" class="btnMatricular">Cadastrar</button>
         </div>

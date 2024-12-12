@@ -71,7 +71,7 @@ if (empty($email) || empty($senha) || empty($nivel)) {
             $_SESSION['session_nome'] = $usuario['nome_func'];
             $_SESSION['session_email'] = $usuario['email_corp_func'];
             $_SESSION['session_auth'] = true;
-            
+
             $retorna = ['status' => true, 'msg' => "Bem-vindo à nossa plataforma, " . htmlspecialchars(explode(' ', $usuario['nome_func'])[0]) . "!"];
             header('Content-Type: application/json');
             echo json_encode($retorna);

@@ -1,11 +1,7 @@
 <?php
 session_start();
-// var_dump(($_SESSION['session_nome']));
-// var_dump(($_SESSION['session_email']));
-// var_dump(($_SESSION['session_id']));
-
 //if (empty($_SESSION['session_id'])) {
-//  header('Location: /');
+ // header('Location: ../../../');
  // exit();
 //}
 ?>
@@ -17,7 +13,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylematricula.css">
+  <link rel="stylesheet" href="style.css">
   <title>Luis Alberto Oliveira | Matricular</title>
 </head>
 
@@ -31,8 +27,9 @@ session_start();
       </a>
     </div>
   </header>
+  <div class="opcvoltar"><a href="../"><<-Voltar</a></div>
   <div class="container">
-    <form class="form-cad" id="form-cad" action="action.php" method="POST">
+    <form class="form-cad" id="form-cad" action="../backend/cadastro-aluno.php" method="POST">
       <div class="coluna">
         <div class="form-group">
           <label for="exampleInputNome1">Nome completo</label>
@@ -49,6 +46,7 @@ session_start();
         <div class="form-group">
           <label for="exampleInputPassword1">Sexo</label>
           <select class="form-control" name="sexo" id="sexo">
+            <option value="">Selecione o sexo do aluno...</option>
             <option value="M">Masculino</option>
             <option value="F">Feminino</option>
             <option value="O">Outro</option>
@@ -57,7 +55,7 @@ session_start();
         <div class="form-group">
           <label for="exampleInputEmail1">Turma</label>
           <select class="form-control" name="turma" id="turma">
-            <!-- <option value="">Selecione a turma do aluno...</option> -->
+            <option value="">Selecione a turma do aluno...</option>
             <option value="6">6º Ano</option>
             <option value="7">7º Ano</option>
             <option value="8">8º Ano</option>

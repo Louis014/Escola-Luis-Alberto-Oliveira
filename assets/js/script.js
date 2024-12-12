@@ -36,7 +36,7 @@ if (form_login) {
           confirmButtonText: "Fechar",
         }).then(() => {
           form_login.reset();
-          window.location.href = "/src/diretoria/menu.php";
+          window.location.href = "/src/diretoria/";
         });
         if (resposta["status-prof"]) {
           Swal.fire({
@@ -46,7 +46,7 @@ if (form_login) {
             confirmButtonText: "Fechar",
           }).then(() => {
             form_login.reset();
-            window.location.href = "/src/professor/menu.php";
+            window.location.href = "/src/professor/";
           });
         }
         if (resposta["status-aluno"]) {
@@ -57,7 +57,7 @@ if (form_login) {
             confirmButtonText: "Fechar",
           }).then(() => {
             form_login.reset();
-            window.location.href = "/src/aluno/menu.php";
+            window.location.href = "/src/aluno/";
           });
         }
       } else {

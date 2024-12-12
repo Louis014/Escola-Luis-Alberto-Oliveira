@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!empty($_SESSION['session_id'])) {
-    header('Location: src/diretoria/menu.php');
-    exit();
-}
+//if (!empty($_SESSION['session_id'])) {
+  //  header('Location: src/diretoria/');
+    //exit();
+//}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,7 +15,7 @@ if (!empty($_SESSION['session_id'])) {
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Luis Alberto Oliveira | Login</title>
+    <title>ELAO | Login</title>
 </head>
 
 <body>

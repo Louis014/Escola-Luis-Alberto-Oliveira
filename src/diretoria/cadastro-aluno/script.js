@@ -40,22 +40,11 @@ if (formcad) {
       return;
     }
 
-    Swal.fire({
-      title: "Processando...",
-      html: "Aguarde enquanto estamos cadastrando...",
-      timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading();
-      },
-    });
-
     try {
-      const dados = await fetch("action.php",   {
+      const dados = await fetch("../backend/cadastro-aluno.php", {
         method: "POST",
         body: dadosForm,
       });
-
-      if (!dados.ok) throw new Error("Erro ao processar a solicitação");
 
       const resposta = await dados.json();
 
@@ -65,7 +54,6 @@ if (formcad) {
         confirmButtonColor: "#3085d6",
         confirmButtonText: "Fechar",
       });
-      if (resposta["status"]) formcad.reset();
     } catch (error) {
       Swal.fire({
         text: "Erro ao processar o cadastro. Tente novamente mais tarde.",

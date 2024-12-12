@@ -23,6 +23,11 @@ header {
     top: 0;
 }
 
+.opcvoltar{
+    margin-top: 2rem;
+    margin-left: 10rem;
+  }
+
 .areauser{
     position: absolute;
     right: 2rem;
