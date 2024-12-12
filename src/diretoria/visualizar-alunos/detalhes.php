@@ -1,11 +1,11 @@
 <?php
 require '../../scripts/conn.php';
 session_start();
-//if (empty($_SESSION['session_id'])) {
-// header('Location: ../../../');
-// exit();
-//}
-// TROCAR IF ABAIXO PELO ELSE
+if (empty($_SESSION['session_id'])) {
+ header('Location: ../../../');
+ exit();
+}
+
 
 $turma_aluno = $_GET['turma_aluno'];
 

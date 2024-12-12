@@ -1,10 +1,10 @@
 <?php
 require '../../scripts/conn.php';
 session_start();
-//if (empty($_SESSION['session_id'])) {
-// header('Location: ../../../');
-// exit();
-//}
+if (empty($_SESSION['session_id'])) {
+header('Location: ../../../');
+exit();
+}
 $id_prof = $_GET['id_professor'];
 
 $sql = $pdo->prepare("SELECT * FROM professores WHERE id_professor = :id_professor");
@@ -22,14 +22,6 @@ if ($sql->rowCount() == 1) {
     $nascimento_professor = $usuario['nascimento_professor'];
     $sexo_professor = $usuario['sexo_professor'];
 }
-
-// if (
-//     empty($nome_func) || empty($email_pess_func) || empty($email_corp_func) || empty($telefone_func) || empty($cpf_func)
-//     || empty($sexo_func) || empty($nascimento_func) || empty($cargo_func)
-// ) {
-//     header('Location: index.php');
-//     exit();
-// }
 
 
 ?>

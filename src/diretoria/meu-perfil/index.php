@@ -1,10 +1,10 @@
 <?php
 session_start();
 require '../../scripts/conn.php';
-//if (empty($_SESSION['session_id'])) {
-// header('Location: ../../../');
-// exit();
-//}
+if (empty($_SESSION['session_id'])) {
+header('Location: ../../../');
+exit();
+}
 
 if (1 > 0) {
   $sql = $pdo->prepare("SELECT * FROM diretoria WHERE id_func = :id_func");

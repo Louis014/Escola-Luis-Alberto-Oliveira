@@ -1,11 +1,10 @@
 <?php
 require '../../scripts/conn.php';
 session_start();
-//if (empty($_SESSION['session_id'])) {
-// header('Location: ../../../');
-// exit();
-//}
-// TROCAR IF ABAIXO PELO ELSE
+if (empty($_SESSION['session_id'])) {
+header('Location: ../../../');
+exit();
+}
 if (1 > 0) {
   $sql = $pdo->prepare("SELECT * FROM professores");
   $sql->execute();

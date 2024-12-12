@@ -12,8 +12,8 @@ if (empty($email) || empty($senha)) {
     echo json_encode($retorna);
     exit();
 } else {
-    $sql = $pdo->prepare("SELECT * FROM diretoria WHERE email_pess_func = :email_pess_func AND senha_func = :senha_func");
-    $sql->bindValue(':email_pess_func', $email);
+    $sql = $pdo->prepare("SELECT * FROM diretoria WHERE email_corp_func = :email_corp_func AND senha_func = :senha_func");
+    $sql->bindValue(':email_corp_func', $email);
     $sql->bindValue(':senha_func', $senha);
     $sql->execute();
 
@@ -21,7 +21,7 @@ if (empty($email) || empty($senha)) {
         $usuario = $sql->fetch(PDO::FETCH_BOTH);
         $_SESSION['session_id'] = $usuario['id_func'];
         $_SESSION['session_nome'] = $usuario['nome_func'];
-        $_SESSION['session_email'] = $usuario['email_pess_func'];
+        $_SESSION['session_email'] = $usuario['email_corp_func'];
         $_SESSION['session_auth'] = true;
 
         $retorna = ['status-dir' => true, 'msg' => "Bem-vindo à nossa plataforma, " . htmlspecialchars(explode(' ', $usuario['nome_func'])[0]) . "!"];

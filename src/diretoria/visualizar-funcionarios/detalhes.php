@@ -1,10 +1,10 @@
 <?php
 require '../../scripts/conn.php';
 session_start();
-//if (empty($_SESSION['session_id'])) {
-// header('Location: ../../../');
-// exit();
-//}
+if (empty($_SESSION['session_id'])) {
+header('Location: ../../../');
+exit();
+}
 $id = $_GET['id_func'];
 
 $sql = $pdo->prepare("SELECT * FROM apoio WHERE id_func = :id_func");

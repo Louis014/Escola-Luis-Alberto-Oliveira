@@ -1,9 +1,9 @@
 <?php
 session_start();
-//if (empty($_SESSION['session_id'])) {
-//  header('Location: ../../');
-//  exit();
-//}
+if (empty($_SESSION['session_id'])) {
+ header('Location: ../../');
+ exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
