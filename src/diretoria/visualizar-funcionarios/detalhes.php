@@ -87,9 +87,12 @@ if ($sql->rowCount() == 1) {
                 </div>
             </div>
         </form>
-        <input type="hidden" value="<?php echo !empty($_GET['id']) ? $_GET['id'] : null;  var_dump($id); ?>">
-        <button type="submit" class="btnExcluir" onclick="">Excluir</button>
-        <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>
+
+        <form action="../backend/excluir-funcionario.php" method="POST" class="excluir-func" id="excluir-func"> 
+            <input type="hidden" value="<?php echo !empty($_GET['id_func']) ? $_GET['id_func'] : null; ?>" id="id_func" class="id_func" name="id_func">
+            <button type="submit" class="btnExcluir">Excluir</button>
+            <p class="creds" style="margin-top: 1rem;">Powered by Luis Filipe & Pedro Silva 2024 ©</p>
+        </form>
     </div>
 
 

@@ -32,7 +32,7 @@ session_start();
             <a href="cadastro-funcionario/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/addfunc.png">Cadastrar Funcionário</button></a>
         </div>
         <div class="colunabtn">
-            <a href="visualizar-alunos"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>
+            <a href="visualizar-alunos/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/veralunos.png">Alunos</button></a>
             <a href="visualizar-professores/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/professores.png">Professores</button></a>
             <a href="visualizar-funcionarios/"><button class="btnmenu"><img class="imgbtnmenu" src="../../assets/images/func.png">Funcionários</button></a>
         </div>
